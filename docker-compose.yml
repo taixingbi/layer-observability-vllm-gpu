@@ -1,0 +1,10 @@
+services:
+  dcgm-exporter:
+    image: nvcr.io/nvidia/k8s/dcgm-exporter:latest
+    container_name: dcgm-exporter
+    restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "9400:9400"
+    gpus: all
