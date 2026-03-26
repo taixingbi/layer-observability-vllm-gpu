@@ -10,7 +10,9 @@ This repository provides a runnable setup for monitoring two GPU vLLM nodes from
 
 Each GPU node runs:
 
-- `vllm` on `:8000`
+- `vllm` on `:8000` -> inference -> Qwen/Qwen2.5-7B-Instruct
+- `vllm` on `:8001` -> embedding -> BAAI/bge-m3
+
 - `dcgm-exporter` on `:9400`
 - `node-exporter` on `:9100`
 
